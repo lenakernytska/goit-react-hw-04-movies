@@ -1,0 +1,28 @@
+body {
+  color: black;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
