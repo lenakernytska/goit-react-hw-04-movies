@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 0 50px;
+}
+
+.item {
+  width: calc((100% - 20px) / 5);
+  text-align: center;
+}
+
+.item:not(:nth-child(5n)) {
+  margin-right: 5px;
+}
+
+.item:not(:nth-last-child(-n + 5)) {
+  margin-bottom: 20px;
+}
+
+.name {
+  font-weight: 500;
+}

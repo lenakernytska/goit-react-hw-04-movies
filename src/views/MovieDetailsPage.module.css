@@ -1,0 +1,93 @@
+.wrapper {
+  display: flex;
+  padding: 50px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.poster {
+  width: 35%;
+  margin-right: 20px;
+}
+.title {
+  color: brown;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.info {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.votes {
+  background-color: lightcoral;
+  border-radius: 2px;
+  padding: 4px;
+}
+
+.subtitle {
+  color: brown;
+  margin-bottom: 10px;
+}
+
+.genre:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.genre {
+  display: block;
+}
+
+.link {
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.link:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.activeLink {
+  color: brown;
+}
+
+.detailNav {
+  padding: 20px 50px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.descr {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.error {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 20px auto;
+  color: brown;
+}
+
+.button {
+  margin-top: 30px;
+
+  background-color: gray;
+  color: brown;
+  font-weight: 700;
+  font-size: 16px;
+  width: 150px;
+  height: 30px;
+  border: 2px solid gray;
+  border-radius: 4px;
+  outline: none;
+}
+
+.button:hover {
+  background-color: brown;
+  color: gray;
+}

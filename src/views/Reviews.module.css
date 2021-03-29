@@ -1,0 +1,19 @@
+.list {
+  padding: 20px 50px;
+}
+
+.author {
+  color: brown;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.content {
+  color: gray;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 30px;
+}
