@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import {fetchTrendFilms} from "../services/ApiService"
-import Container from "../components/Container";
 import styles from "./HomeView.module.css"
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 
 
@@ -18,7 +18,6 @@ export default function HomeView() {
 
     return (
         <main className={styles.main}>
-        <Container>
             <h1 className={styles.sectionTitle}>Trendy movies for today</h1>
   <ul className={styles.list}>
           {trends && trends.map(({id, poster_path, title, name}) => <li key={id} className={styles.card}>
@@ -27,8 +26,16 @@ export default function HomeView() {
               <h2 className={styles.cardTitle}>{title || name}</h2></Link>
       </li>)}
      </ul>
-            </Container>
+         
               </main>
   );
 }
 
+HomeView.propTypes = {
+     trends: PropTypes.arrayOf(PropTypes.shape({
+         id: PropTypes.number.isRequired,
+         poster_path: PropTypes.string.isRequired,
+         title: PropTypes.string.isRequired,
+         name: PropTypes.string.isRequired
+     })),
+   }

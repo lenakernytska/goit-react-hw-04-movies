@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieReviews } from "../services/ApiService";
 import styles from "./Reviews.module.css";
+import PropTypes from 'prop-types';
 
 
-export default function Review() {
+export default function Reviews() {
     const { movieId } = useParams();
     const [reviews, setReviews]= useState([])
  
@@ -22,3 +23,11 @@ const noReviewMessage="We do not have any review for this movie :("
             </li>) : noReviewMessage}
        </ul>)
 }
+
+Reviews.propTypes = {
+     reviews: PropTypes.arrayOf(PropTypes.shape({
+         author: PropTypes.number.isRequired,
+         content: PropTypes.string.isRequired,
+       })),
+    
+   }

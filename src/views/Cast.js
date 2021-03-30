@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { fetchMovieCast } from "../services/ApiService";
 import styles from "./Cast.module.css";
 import notFound from "../images/notFound.png";
+import PropTypes from 'prop-types';
 
 
 const imageSrc = "https://image.tmdb.org/t/p/original";
@@ -23,3 +24,11 @@ export default function Cast() {
             </li>)}
         </ul>)
 }
+
+Cast.propTypes = {
+    cast: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    profile_path: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
+     })),
+   }
