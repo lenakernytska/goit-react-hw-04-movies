@@ -25,7 +25,7 @@ export default function MovieDetailsPage() {
      function handleClick() {
          history.push({
           pathname: (location.state? "/movies": "/"),
-             search: `query=${location.state}`,
+             search: (location.state? `query=${location.state}`: ''),
           state: location.state,
       })
     
@@ -59,13 +59,13 @@ export default function MovieDetailsPage() {
                     <p className={styles.descr}>Additional information:</p>
                    <NavLink to={{
                             pathname: `${url}/cast`,
-                           search: `query=${location.state}`,
+                           search: '',
                             state: location.state,
                     }}
                         className={styles.link} activeClassName={styles.activeLink}>Cast</NavLink>
                    <NavLink to={{
                             pathname: `${url}/reviews`,
-                           search: `query=${location.state}`,
+                           search: '',
                             state: location.state,
                     }}
                         className={styles.link} activeClassName={styles.activeLink}>Review</NavLink>

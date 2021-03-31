@@ -70,7 +70,7 @@ const handleSubmit = event => {
               
                         <Link to={{
                             pathname: `${url}/${id}`,
-                            search: `query=${query}`,
+                            search: '',
                             state: query,
                         }}>
                             <img className={styles.image} src={poster_path ? `${imageSrc}${poster_path}` : notFound} alt={title} />
